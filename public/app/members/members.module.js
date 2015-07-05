@@ -1,21 +1,21 @@
 (function () {
-    var module = angular.module('app.about', []);
+    var module = angular.module('app.members', []);
 
     function config($stateProvider) {
         $stateProvider
-            .state('app.about', {
-                url: '/about',
+            .state('app.members', {
+                url: '/members',
                 views: {
                     'content@': {
-                        templateUrl: 'app/about/about.html'
+                        templateUrl: 'app/members/members.html'
                     }
                 }
             })
-            .state('app.about.history', {
-                url: '/history',
+            .state('app.members.alumni', {
+                url: '/alumni',
                 views: {
                     'content@': {
-                        templateUrl: 'app/about/history.html'
+                        templateUrl: 'app/members/alumni.html'
                     }
                 }
             });

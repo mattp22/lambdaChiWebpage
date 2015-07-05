@@ -1,5 +1,4 @@
 @green: #016a3a;
-
 body {
     padding-bottom: 70px;
 }
@@ -63,8 +62,8 @@ body {
 }
 
 .divide {
-     border-bottom: 1px solid #ccc;
-     box-shadow: 0px -2px 5px #888888;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px -2px 5px #888888;
 }
 
 .media {
@@ -77,4 +76,28 @@ body {
 
 .home-img {
     border: solid @green;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+.event-paragraph {
+    margin-top: 1em;
+}
+
+.event-rows {
+    margin-top: 2em;
+}
+
+#composite {
+    margin-top: 3em;
 }

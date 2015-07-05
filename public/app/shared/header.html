@@ -1,4 +1,4 @@
-<div role="navigation" class="navbar navbar-default" ng-controller="HeaderCtrl as vm">
+<div role="navigation" class="navbar navbar-default navbar-static-top" ng-controller="HeaderCtrl as vm">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -16,19 +16,41 @@
                 <li ng-class="{ active: vm.isActive('/')}">
                     <a ui-sref="app.home"><i class="glyphicon glyphicon-home"></i> Home</a>
                 </li>
-                <li ng-class="{ active: vm.isActive('/philanthropy')}">
-                    <a ui-sref="app.philanthropy"><i class="glyphicon glyphicon-apple"></i> Philanthropy</a>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/philanthropy')}">
+                    <a ui-sref="app.philanthropy" class="dropdown-toggle disabled">
+                        <i class="glyphicon glyphicon-apple"></i> Philanthropy
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/philanthropy/info')}">
+                            <a ui-sref="app.philanthropy.info"> <i class="ion-soup-can-outline"></i> Watermelon Bust Info</a>
+                        </li>
+                    </ul>
                 </li>
-                <li ng-class="{ active: vm.isActive('/recruitment')}">
-                    <a ui-sref="app.recruitment"href><i class="glyphicon glyphicon-user"></i> Recruitment</a>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/recruitment')}">
+                    <a ui-sref="app.recruitment" class="dropdown-toggle disabled">
+                        <i class="fa fa-user-plus"></i> Recruitment
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/recruitment/spring15')}"><a ui-sref="app.recruitment.spring15"><i class="fa fa-calendar"></i> Spring 2015 Rush</a></li>
+                    </ul>
                 </li>
-                <li ng-class="{ active: vm.isActive('/about')}">
-                    <a ui-sref="app.about"><i class="fa fa-info-circle"></i> About</a>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/about')}">
+                    <a ui-sref="app.about" class="dropdown-toggle disabled">
+                        <i class="fa fa-info-circle"></i> About
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/about/history')}"><a ui-sref="app.about.history"><i class="fa fa-book"></i> History</a></li>
+                    </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href><i class="fa fa-users"></i> Members</a>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/members')}">
+                    <a ui-sref="app.members" class="dropdown-toggle disabled">
+                        <i class="fa fa-users"></i> Members
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/members/alumni')}"><a ui-sref="app.members.alumni"><i class="fa fa-graduation-cap"></i> Alumni</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>

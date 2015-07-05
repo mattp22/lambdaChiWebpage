@@ -10,6 +10,14 @@
                         templateUrl: 'app/recruitment/recruitment.html'
                     }
                 }
+            })
+            .state('app.recruitment.spring15', {
+                url: '/spring15',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/recruitment/spring15.html'
+                    }
+                }
             });
     }
 

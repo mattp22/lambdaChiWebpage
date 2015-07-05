@@ -10,6 +10,14 @@
                         templateUrl: 'app/philanthropy/philanthropy.html'
                     }
                 }
+            })
+            .state('app.philanthropy.info', {
+                url: '/info',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/philanthropy/info.html'
+                    }
+                }
             });
     }
 

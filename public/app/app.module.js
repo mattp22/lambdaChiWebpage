@@ -6,7 +6,8 @@
     	'app.home',
         'app.philanthropy',
         'app.recruitment',
-        'app.about'
+        'app.about',
+        'app.members'
     ]);
 
     function config($stateProvider, $urlRouterProvider) {
