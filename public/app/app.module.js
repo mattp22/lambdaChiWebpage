@@ -3,7 +3,10 @@
     var module = angular.module('app', [
     	'ui.router',
     	'ui.bootstrap',
-    	'app.home'
+    	'app.home',
+        'app.philanthropy',
+        'app.recruitment',
+        'app.about'
     ]);
 
     function config($stateProvider, $urlRouterProvider) {
