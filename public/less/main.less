@@ -43,12 +43,14 @@ body {
     padding-bottom: 2em;
     h1 {
         color: @green;
-        font-weight: bold
+        font-weight: bold;
+        font-family: Copperplate Gothic Light, sans-serif;
     }
     h2 {
         color: maroon;
         font-style: italic;
         margin-top: 35px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 }
 
@@ -76,6 +78,7 @@ body {
 
 .home-img {
     border: solid @green;
+    margin-bottom: 3em;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -94,8 +97,13 @@ body {
     margin-top: 1em;
 }
 
-.event-rows, .contact-rows {
+.event-rows,
+.contact-rows {
     margin-top: 1em;
+}
+
+.info-rows {
+    margin-top: 3em;
 }
 
 #composite {
@@ -115,6 +123,24 @@ body {
     visibility: hidden;
 }
 
-.well {
+.well-contact {
     margin-top: 2em;
+}
+
+.home-title {
+    color: @green;
+}
+
+.home-date {
+    font-style: italic;
+}
+
+.home-header {
+    text-decoration: underline;
+    color: @green;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
 }

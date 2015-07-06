@@ -1,7 +1,7 @@
 <div class="container content-container" ng-controller="RecruitmentCtrl as vm">
     <h2>Spring 2015 Rush</h2>
     <div ng-repeat="e in vm.events" ng-class-even="'row'" class="event-rows">
-        <div class="col-md-6">
+        <div class="col-md-5" ng-class-odd="'col-md-offset-1'">
             <div class="media">
                 <div class="media-left">
                     <img class="media-object" src="{{e.image}}" alt="event">

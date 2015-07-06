@@ -56,7 +56,7 @@
                         <li ng-class="{active: vm.isActive('/members/alumni')}"><a ui-sref="app.members.alumni"><i class="fa fa-graduation-cap"></i> Alumni</a></li>
                     </ul>
                 </li>
-                <li>
+                <li ng-class="{ active: vm.isActive('/contact')}">
                     <a ui-sref="app.contact"><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>
                 </li>
             </ul>

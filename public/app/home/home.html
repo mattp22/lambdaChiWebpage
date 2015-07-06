@@ -20,10 +20,35 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="col-md-offset-1 col-md-7 well">
+<div class="container" ng-controller="HomeCtrl as vm">
+    <div class="col-md-8">
+        <div class="row well" ng-repeat="e in vm.events">
+            <div class="col-md-5">
+                <img src="{{e.img}}" alt="image" height="270" width="270">
+                <h3>{{e.highZeta[0]}}</h3>
+            </div>
+            <div class="col-md-7">
+                <h4 class="home-title">{{e.title}}</h4>
+                <h5 class="home-date">{{e.date}}</h5>
+                <p ng-repeat="p in e.text">
+                    {{p}}
+                </p>
+                <h5 class="home-header">{{e.headers[0]}}</h5>
+                <ul>
+                    <li ng-repeat="name in e.highZeta">
+                        {{name}}
+                    </li>
+                </ul>
+                <h5 class="home-header">{{e.headers[1]}}</h5>
+                <ul>
+                    <li ng-repeat="mem in e.newMembers">
+                        {{mem}}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="col-md-offset-1 col-md-3">
-        <img class="home-img" src="app/home/images/house.jpg" alt="house">
+        <img ng-repeat="img in vm.images" class="home-img" src="{{img}}" alt="" height="250" width="300">
     </div>
 </div>
