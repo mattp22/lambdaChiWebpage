@@ -18,6 +18,14 @@
                         templateUrl: 'app/philanthropy/info.html'
                     }
                 }
+            })
+            .state('app.philanthropy.photos', {
+                url: '/photos',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/philanthropy/photos.html'
+                    }
+                }
             });
     }
 

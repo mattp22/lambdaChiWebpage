@@ -1,0 +1,22 @@
+<div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
+    <div class="col-md-offset-1 col-md-10">
+        <div class="row">
+            <h3 id="winner">Congratulations to the Fall 2014 Champions Alpha Phi!</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-9">
+                <img src="app/philanthropy/images/winners.jpg" alt="winners">
+            </div>
+        </div>
+        <div class="row">
+            <h3 id="slideshow">Photos from Watermelon Bust Fall 2014</h3>
+        </div>
+        <div class="row col-md-offset-1 col-md-10">
+            <carousel interval="3000">
+                <slide ng-repeat="slide in vm.slides">
+                    <img ng-src="{{slide}}" style="margin:auto;height:305px;">
+                </slide>
+            </carousel>
+        </div>
+    </div>
+</div>

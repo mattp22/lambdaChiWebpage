@@ -1,0 +1,27 @@
+<div class="container content-container" ng-controller="ContactCtrl as vm">
+    <div class="col-md-offset-1 col-md-5">
+        <div class="row contact-rows" ng-repeat="i in vm.info">
+            <h4>{{i.name}}</h4>
+            <p>Phone: {{i.phone}}
+                <br> Email: {{i.email}}</p>
+            <div class="divide"></div>
+        </div>
+    </div>
+    <div class="col-md-4 col-md-offset-1 well">
+        <form role="form">
+        	<div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="subject" placeholder="Subject">
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="5" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default pull-right">Send</button>
+        </form>
+    </div>
+</div>

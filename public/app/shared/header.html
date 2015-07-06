@@ -22,7 +22,11 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li ng-class="{active: vm.isActive('/philanthropy/info')}">
-                            <a ui-sref="app.philanthropy.info"> <i class="ion-soup-can-outline"></i> Watermelon Bust Info</a>
+                            <a ui-sref="app.philanthropy.info">&nbsp;<i class="ion-soup-can-outline"></i> &nbsp;Watermelon Bust Info</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/philanthropy/photos')}">
+                            <a ui-sref="app.philanthropy.photos"><i class="fa fa-picture-o"></i> Watermelon Bust Photos</a>
                         </li>
                     </ul>
                 </li>
@@ -53,7 +57,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>
+                    <a ui-sref="app.contact"><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>
                 </li>
             </ul>
         </div>

@@ -49,7 +49,7 @@
         };
 
         var e6 = {
-            heading: "Jersey Day",
+            heading: "Closed Rush",
             image: "app/recruitment/images/e6.jpg"
         };
 

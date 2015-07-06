@@ -15,7 +15,7 @@ body {
 .content-container {
     background-color: #FEF6D9;
     padding-bottom: 3.5em;
-    h3 {
+    h3, h4 {
         margin-top: 1em;
         color: @green;
         font-weight: bold;
@@ -80,7 +80,7 @@ body {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 0; // remove the gap so it doesn't close
+    margin-top: 0;
 }
 
 .dropdown-menu > .active > a,
@@ -94,10 +94,27 @@ body {
     margin-top: 1em;
 }
 
-.event-rows {
-    margin-top: 2em;
+.event-rows, .contact-rows {
+    margin-top: 1em;
 }
 
 #composite {
     margin-top: 3em;
+}
+
+#winner {
+    color: red;
+    text-align: center;
+}
+
+#slideshow {
+    text-align: center;
+}
+
+.carousel-indicators {
+    visibility: hidden;
+}
+
+.well {
+    margin-top: 2em;
 }
