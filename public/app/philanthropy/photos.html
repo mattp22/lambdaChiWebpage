@@ -15,7 +15,7 @@
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="item" ng-repeat="slide in vm.slides" ng-class="{active: $index===0}">
-                        <img alt="" src="{{slide}}" style="margin:auto;height:305px;">
+                        <img alt="" ng-src="{{slide}}" style="margin:auto;height:305px;">
                     </div>
                 </div>
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
