@@ -16,14 +16,16 @@
                 method: 'post',
                 url: '/api/emails',
                 data: data
-            }).
-            success(function(data, status, headers, config) {
+            }).then(function(res) {
                 alert('Your email has been sent.');
-                console.log(status);
-            }).
-            error(function(data, status, headers, config) {
-                alert('There was an error in submitting your email.');
-                console.log(status);
+            }, function(res) {
+                var error;
+                if(res.status === 0) {
+                    error = 'The Internet connection appears to be offline.';
+                } else {
+                    error = res.statusText;
+                }
+                alert('There was an error in submitting your email.\n\n' + error);
             });
         };
 
