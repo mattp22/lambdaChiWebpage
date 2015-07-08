@@ -1,5 +1,5 @@
 <div class="container content-container" ng-controller="ContactCtrl as vm">
-    <div class="col-md-offset-1 col-md-5">
+    <div class="col-sm-offset-1 col-sm-5">
         <div class="row contact-rows" ng-repeat="i in vm.info">
             <h4>{{i.name}}</h4>
             <p>Phone: {{i.phone}}
@@ -7,7 +7,7 @@
             <div class="divide"></div>
         </div>
     </div>
-    <div class="col-md-4 col-md-offset-1 well well-contact">
+    <div class="col-sm-4 col-sm-offset-1 well well-contact">
         <p class="contact">Leave Us a Message</p>
         <form role="form" data-ng-submit="vm.sendEmail()">
             <div class="form-group">
@@ -22,10 +22,10 @@
             <div class="form-group">
                 <textarea rows="5" class="form-control" data-ng-model="vm.message" placeholder="Message" required></textarea>
             </div>
-            <div class="hidden-xs">
+            <div class="hidden-xs col-sm-8">
                 <p class="contact">All messages are forwarded to the chapter president.</p>
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-sm-2 col-sm-offset-2">
                 <button type="submit" class="btn btn-default pull-right">Send</button>
             </div>
         </form>

@@ -1,12 +1,12 @@
 <div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
     <div class="col-md-offset-1">
-        <img class="hidden-xs" src="app/philanthropy/images/posters.jpg" alt="posters banner" width="950">
+        <img class="hidden-xs" id="postersbanner" src="app/philanthropy/images/posters.jpg" alt="posters banner" width="950">
         <div class="info">
             <div class="row" ng-repeat="i in vm.info">
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <img class="home-img" ng-src="{{i.img}}" alt="img" width="350" height="250">
                 </div>
-                <div class="col-md-offset-1 col-md-6">
+                <div class="col-sm-6 col-md-offset-1 col-md-5">
                     <h3>{{i.header}}</h3>
                     <p ng-repeat="p in i.text">{{p}}</p>
                 </div>
