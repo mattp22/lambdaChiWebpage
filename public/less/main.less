@@ -157,3 +157,32 @@ ul {
 .jumbotron {
     border-bottom: solid @green;
 }
+
+.news-img {
+    height: 270px;
+    width: 270px;
+}
+
+@media (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+    .news-img {
+        height: 200px;
+        width: 200px;
+    }
+    .navbar-collapse {
+        text-align: justify;
+    }
+    .navbar-fixed-bottom {
+        .navbar-right > li {
+            display: inline-block;
+        }
+        .navbar-right {
+            margin: 0;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+    }
+}
