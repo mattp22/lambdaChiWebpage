@@ -61,6 +61,27 @@
             e5,
             e6
         ];
+
+        vm.delta = [
+            {
+                name: "Peter Burns",
+                info: [
+                    "Rush Chair",
+                    "High Delta",
+                    "Senior"
+                ],
+                img: "pete.jpg"
+            },
+            {
+                name: "Brian Heffernan",
+                info: [
+                    "Rush Chair",
+                    "Low Delta",
+                    "Junior"
+                ],
+                img: "brian.jpg"
+            }
+        ];
     }
 
     module.controller('RecruitmentCtrl', RecruitmentCtrl);

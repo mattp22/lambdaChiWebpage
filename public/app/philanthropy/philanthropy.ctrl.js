@@ -40,6 +40,26 @@
                 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eius, delectus atque molestias pariatur sapiente excepturi. Alias laudantium numquam, molestias, eos optio, cupiditate fuga dolore dolores voluptate quia voluptas quod!"
             ]
         }];
+
+        vm.theta = [
+            {
+                name: "Christopher Connors",
+                info: [
+                    "External Vice President",
+                    "High Theta",
+                    "Senior"
+                ],
+                img: "topher.jpg"
+            },
+            {
+                name: "Logan Shain",
+                info: [
+                    "Low Theta",
+                    "Junior"
+                ],
+                img: "logan.png"
+            }
+        ];
     }
 
     module.controller('PhilanthropyCtrl', PhilanthropyCtrl);

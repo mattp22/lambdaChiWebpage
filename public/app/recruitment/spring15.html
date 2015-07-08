@@ -2,17 +2,21 @@
     <h2>Spring 2015 Rush</h2>
     <div ng-repeat="e in vm.events" ng-class-even="'row'" class="event-rows">
         <div class="col-md-5" ng-class-odd="'col-md-offset-1'">
-            <div class="media">
-                <div class="media-left">
-                    <img class="media-object" ng-src="{{e.image}}" alt="event">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">{{e.heading}}</h4>
                 </div>
-                <div class="media-body media-middle">
-                    <h3 class="media-heading">{{e.heading}}</h3>
-                    <p>
-                        {{e.date}}
-                        <br>{{e.location}}
-                        <br>{{e.time}}
-                    </p>
+                <div class="panel-body">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="{{e.image}}" alt="event">
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>
+                            {{e.date}}
+                            <br>{{e.location}}
+                            <br>{{e.time}}
+                        </p>
+                    </div>
                 </div>
             </div>
             <p class="event-paragraph">{{e.description}}</p>

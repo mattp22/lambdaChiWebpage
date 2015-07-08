@@ -1,4 +1,4 @@
-<div class="container content-container">
+<div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
     <div class="col-md-offset-1 col-md-10">
         <h3>Philanthropy</h3>
         <p>
@@ -9,31 +9,20 @@
         </p>
         <button ui-sref="app.philanthropy.info" style="margin-bottom:1em;" class="btn btn-info">Watermelon Bust Info</button>
     </div>
-    <div class="col-md-5 col-md-offset-1">
-        <div class="media">
-            <div class="media-left">
-                <img class="media-object" src="app/philanthropy/images/topher.jpg" alt="topher">
+    <div class="col-md-5" ng-class-odd="'col-md-offset-1'" ng-repeat="theta in vm.theta">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">{{theta.name}}</h4>
             </div>
-            <div class="media-body media-middle">
-                <h3 class="media-heading">Christopher Connors</h3>
-                <p>
-                    External Vice President - High Theta
-                    <br>Junior
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-5">
-        <div class="media">
-            <div class="media-left">
-                <img class="media-object" src="app/philanthropy/images/logan.png" alt="logan">
-            </div>
-            <div class="media-body media-middle">
-                <h3 class="media-heading">Logan Shain</h3>
-                <p>
-                    Low Theta
-                    <br> Sophomore
-                </p>
+            <div class="panel-body">
+                <div class="media-left">
+                    <img class="media-object" ng-src="app/philanthropy/images/{{theta.img}}" alt="theta">
+                </div>
+                <div class="media-body media-middle">
+                    <p ng-repeat="i in theta.info">
+                        {{i}}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
