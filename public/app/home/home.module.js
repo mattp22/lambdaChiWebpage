@@ -1,4 +1,4 @@
-(function () {
+(function() {
     var module = angular.module('app.home', []);
 
     function config($stateProvider) {

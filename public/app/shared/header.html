@@ -53,7 +53,12 @@
                         <i class="fa fa-users"></i> Members
                     </a>
                     <ul class="dropdown-menu">
-                        <li ng-class="{active: vm.isActive('/members/alumni')}"><a ui-sref="app.members.alumni"><i class="fa fa-graduation-cap"></i> Alumni</a></li>
+                        <li ng-class="{active: vm.isActive('/members/alumni')}"><a ui-sref="app.members.alumni"><i class="fa fa-graduation-cap"></i> Alumni</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/members/brothers-page')}">
+                            <a href="" ng-click="vm.login()" disabled><img src="favicon.ico" alt=""> Brothers Page</a>
+                        </li>
                     </ul>
                 </li>
                 <li ng-class="{ active: vm.isActive('/contact')}">

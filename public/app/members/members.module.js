@@ -1,4 +1,4 @@
-(function () {
+(function() {
     var module = angular.module('app.members', []);
 
     function config($stateProvider) {
@@ -16,6 +16,14 @@
                 views: {
                     'content@': {
                         templateUrl: 'app/members/alumni.html'
+                    }
+                }
+            })
+            .state('app.members.brothers', {
+                url: '/brothers-page',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/members/brothers-page.html'
                     }
                 }
             });
