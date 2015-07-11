@@ -3,6 +3,7 @@
     var module = angular.module('app', [
         'ui.router',
         'ui.bootstrap',
+        'jsend',
         'app.home',
         'app.philanthropy',
         'app.recruitment',

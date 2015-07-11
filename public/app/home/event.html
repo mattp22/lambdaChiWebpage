@@ -1,0 +1,15 @@
+<form name="eventForm" novalidate>
+    <div class="modal-header">
+        <h2>Add Event</h2>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" ng-model="vm.title" required>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="vm.submit()" ng-disabled="!eventForm.$valid">Submit</button>
+        <button class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</form>

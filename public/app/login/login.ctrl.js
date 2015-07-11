@@ -1,6 +1,6 @@
 (function(module) {
 
-    function LoginCtrl($scope, $location, $modalInstance, $state) {
+    function LoginCtrl($scope, $modalInstance, $state) {
         var vm = this;
 
         vm.login = function() {
