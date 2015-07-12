@@ -6,7 +6,7 @@
         </p>
     </div>
     <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="delta in vm.delta">
-        <button ng-show="vm.loggedIn" class="btn btn-primary pull-right" ng-click="vm.edit(delta, $index)">Edit</button>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editDelta(delta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{delta.name}}</h4>

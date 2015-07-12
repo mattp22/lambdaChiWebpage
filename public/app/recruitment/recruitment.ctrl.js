@@ -35,7 +35,7 @@
             }
         }
 
-        vm.edit = function(delta, index) {
+        vm.editDelta = function(delta, index) {
             $scope.delta = angular.copy(delta);
             $scope.index = index;
 
@@ -46,6 +46,36 @@
                 scope: $scope
             }).result.finally(function() {
                 getDelta();
+            });
+        };
+
+        vm.editSpring = function(event, index) {
+            $scope.event = angular.copy(event);
+            $scope.index = index;
+            $scope.season = "spring";
+
+            $modal.open({
+                templateUrl: 'app/recruitment/eventEdit.html',
+                controller: 'EventEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getSpringEvents();
+            });
+        };
+
+        vm.editFall = function(event, index) {
+            $scope.event = angular.copy(event);
+            $scope.index = index;
+            $scope.season = "fall";
+
+            $modal.open({
+                templateUrl: 'app/recruitment/eventEdit.html',
+                controller: 'EventEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getFallEvents();
             });
         };
     }

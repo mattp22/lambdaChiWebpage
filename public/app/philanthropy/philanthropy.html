@@ -10,7 +10,7 @@
         <button ui-sref="app.philanthropy.info" style="margin-bottom:1em;" class="btn btn-info">Watermelon Bust Info</button>
     </div>
     <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="theta in vm.theta">
-        <button ng-show="vm.loggedIn" class="btn btn-primary pull-right" ng-click="vm.edit(theta, $index)">Edit</button>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.edit(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{theta.name}}</h4>

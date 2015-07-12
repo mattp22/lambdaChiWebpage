@@ -9,6 +9,7 @@
         </p>
     </div>
     <div class="col-md-5 col-sm-7 col-sm-offset-1" ng-repeat="rho in vm.rho">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.edit(rho, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{rho.name}}</h4>
@@ -18,7 +19,9 @@
                     <img class="media-object" ng-src="app/members/images/{{rho.img}}" alt="rho">
                 </div>
                 <div class="media-body media-middle">
-                    <p ng-repeat="p in rho.info">{{p}}</p>
+                    <p>{{rho.zeta}}</p>
+                    <p>{{rho.hol}}</p>
+                    <p>{{rho.year}}</p>
                 </div>
             </div>
         </div>

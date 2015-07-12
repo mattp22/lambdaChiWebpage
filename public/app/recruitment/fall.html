@@ -2,6 +2,7 @@
     <h2>Fall 2015 Rush</h2>
     <div ng-repeat="e in vm.fallEvents" ng-class-even="'row'" class="event-rows">
         <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'">
+            <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editFall(e, $index)"><i class="glyphicon glyphicon-edit"></i></button>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">{{e.heading}}</h4>

@@ -104,6 +104,14 @@
             );
         }
 
+        function editSpringEvent(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/spring-events',
+                data: data
+            });
+        }
+
         function fallEvents() {
             return jsend({
                 method: 'GET',
@@ -113,6 +121,14 @@
                     return response.data;
                 }
             );
+        }
+
+        function editFallEvent(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/fall-events',
+                data: data
+            });
         }
 
         function contact() {
@@ -137,6 +153,14 @@
             );
         }
 
+        function editRho(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/rho',
+                data: data
+            });
+        }
+
         return {
             homeData: homeData,
             addEvent: addEvent,
@@ -148,9 +172,12 @@
             delta: delta,
             editDelta: editDelta,
             springEvents: springEvents,
+            editSpringEvent: editSpringEvent,
             fallEvents: fallEvents,
+            editFallEvent: editFallEvent,
             contact: contact,
-            rho: rho
+            rho: rho,
+            editRho: editRho
         };
     }
 
