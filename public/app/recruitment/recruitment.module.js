@@ -11,11 +11,19 @@
                     }
                 }
             })
-            .state('app.recruitment.spring15', {
-                url: '/spring15',
+            .state('app.recruitment.spring', {
+                url: '/spring',
                 views: {
                     'content@': {
-                        templateUrl: 'app/recruitment/spring15.html'
+                        templateUrl: 'app/recruitment/spring.html'
+                    }
+                }
+            })
+            .state('app.recruitment.fall', {
+                url: '/fall',
+                views: {
+                    'content@': {
+                        templateUrl: 'app/recruitment/fall.html'
                     }
                 }
             });

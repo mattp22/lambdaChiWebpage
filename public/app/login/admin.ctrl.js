@@ -1,13 +1,13 @@
 (function(module) {
 
-    function LoginCtrl($scope, $modalInstance, $state) {
+    function AdminCtrl($scope, $modalInstance, $state, $cookies) {
         var vm = this;
 
         vm.login = function() {
-        	if (vm.username === process.env.USERNAME && vm.password === process.env.PASSWORD) {
+        	if (vm.username === process.env.ADMIN_USERNAME && vm.password === process.env.ADMIN_PASSWORD) {
                 $modalInstance.close();
-                $state.go('app.members.brothers');
-                alert("Welcome to the brothers page");
+                $cookies.put('loggedIn', true);
+                alert("You are now signed in as Admin");
         	} else {
         		alert("Wrong Username and Password Combination");
         	}
@@ -19,5 +19,5 @@
         
     }
 
-    module.controller('LoginCtrl', LoginCtrl);
+    module.controller('AdminCtrl', AdminCtrl);
 })(angular.module('app'));

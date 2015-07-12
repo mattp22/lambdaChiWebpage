@@ -1,10 +1,11 @@
 (function(module) {
 
-    function PhilanthropyCtrl($scope, $location, apiService) {
+    function PhilanthropyCtrl($scope, $location, apiService, $cookies, $modal) {
         var vm = this;
         vm.theta = null;
         vm.info = null;
         vm.slides = null;
+        vm.loggedIn = $cookies.get('loggedIn');
 
         getTheta();
         getInfo();
@@ -33,6 +34,20 @@
                 });
             }
         }
+
+        vm.edit = function(theta, index) {
+            $scope.theta = angular.copy(theta);
+            $scope.index = index;
+
+            $modal.open({
+                templateUrl: 'app/philanthropy/thetaEdit.html',
+                controller: 'ThetaEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getTheta();
+            });
+        };
     }
 
     module.controller('PhilanthropyCtrl', PhilanthropyCtrl);

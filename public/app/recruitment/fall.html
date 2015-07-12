@@ -1,0 +1,25 @@
+<div class="container content-container" ng-controller="RecruitmentCtrl as vm">
+    <h2>Fall 2015 Rush</h2>
+    <div ng-repeat="e in vm.fallEvents" ng-class-even="'row'" class="event-rows">
+        <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">{{e.heading}}</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="media-left">
+                        <img class="media-object" ng-src="{{e.image}}" alt="event">
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>
+                            {{e.date}}
+                            <br>{{e.location}}
+                            <br>{{e.time}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="event-paragraph">{{e.description}}</p>
+        </div>
+    </div>
+</div>

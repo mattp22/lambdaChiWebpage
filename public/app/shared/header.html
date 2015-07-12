@@ -35,7 +35,9 @@
                         <i class="fa fa-user-plus"></i> Recruitment
                     </a>
                     <ul class="dropdown-menu">
-                        <li ng-class="{active: vm.isActive('/recruitment/spring15')}"><a ui-sref="app.recruitment.spring15"><i class="fa fa-calendar"></i> Spring 2015 Rush</a></li>
+                        <li ng-class="{active: vm.isActive('/recruitment/spring')}"><a ui-sref="app.recruitment.spring"><i class="fa fa-calendar"></i> Spring Rush</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/recruitment/fall')}"><a ui-sref="app.recruitment.fall"><i class="fa fa-calendar"></i> Fall Rush</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" ng-class="{ active: vm.isActive('/about')}">
@@ -63,6 +65,12 @@
                 </li>
                 <li ng-class="{ active: vm.isActive('/contact')}">
                     <a ui-sref="app.contact"><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>
+                </li>
+                <li>
+                    <a href ng-hide="vm.loggedIn" ng-click="vm.admin()"><i class="fa fa-sign-in"></i> Login</a>
+                </li>
+                <li>
+                    <a href ng-show="vm.loggedIn" ng-click="vm.logout()"><i class="fa fa-sign-out"></i> Logout</a>
                 </li>
             </ul>
         </div>

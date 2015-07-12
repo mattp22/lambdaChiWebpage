@@ -1,4 +1,4 @@
-<div class="container content-container">
+<div class="container content-container" ng-controller="MembersCtrl as vm">
     <div class="col-sm-offset-1 col-sm-10">
         <h3>Alumni</h3>
         <p>
@@ -8,25 +8,17 @@
             As well as this, we want to make more individual connections between alumni and active members. So we will be helping our members connect to alumni that work in a similar sector and have experience with their particular field of work. This is meant to help create a better network between alumni and current members, so graduating brothers have a contact that may be able to point them in the direction of a job opportunity that could be beneficial.
         </p>
     </div>
-    <div class="col-md-5 col-sm-7 col-sm-offset-1">
+    <div class="col-md-5 col-sm-7 col-sm-offset-1" ng-repeat="rho in vm.rho">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4 class="panel-title">Theo Jolley</h4>
+                <h4 class="panel-title">{{rho.name}}</h4>
             </div>
             <div class="panel-body">
                 <div class="media-left">
-                    <img class="media-object" ng-src="app/members/images/theo.jpg" alt="rho">
+                    <img class="media-object" ng-src="app/members/images/{{rho.img}}" alt="rho">
                 </div>
                 <div class="media-body media-middle">
-                    <p>
-                        Alumni Secretary
-                    </p>
-                    <p>
-                        High Rho
-                    </p>
-                    <p>
-                        Junior
-                    </p>
+                    <p ng-repeat="p in rho.info">{{p}}</p>
                 </div>
             </div>
         </div>

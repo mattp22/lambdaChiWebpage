@@ -1,14 +1,10 @@
 (function(module) {
 
-    function EventCtrl($scope, $modalInstance, jsend) {
+    function EventCtrl($scope, $modalInstance, apiService) {
         var vm = this;
 
         vm.submit = function() {
-            jsend({
-                method: 'POST',
-                url: '/api/home-data',
-                data: {title: vm.title}
-            }).then(function() {
+            apiService.addEvent(vm).then(function() {
                 $modalInstance.close();
             });
         };

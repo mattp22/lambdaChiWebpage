@@ -22,7 +22,7 @@
 </div>
 <div class="container" ng-controller="HomeCtrl as vm">
     <div class="col-sm-8">
-        <!-- <button class="btn btn-primary btn-edit" ng-click="vm.addEvent()">Add Event</button> -->
+        <button ng-show="vm.loggedIn" class="btn btn-primary btn-edit" ng-click="vm.addEvent()">Add Event</button>
         <div class="row well" ng-repeat="e in vm.events">
             <div class="col-sm-5">
                 <img class="news-img" ng-src="{{e.img}}" alt="image">

@@ -1,18 +1,13 @@
 (function(module) {
 
-    function HomeCtrl($scope, apiService, $modal) {
+    function HomeCtrl($scope, apiService, $modal, $cookies) {
         var vm = this;
         vm.events = null;
         vm.images = null;
+        vm.loggedIn = $cookies.get('loggedIn');
 
-        apiService.homeData().then(function(results) {
-            vm.events = results;
-        });
-
-        apiService.homeImages().then(function(results) {
-            vm.images = results;
-        });
-
+        getEvents();
+        getImages();
 
         vm.addEvent = function() {
             $modal.open({

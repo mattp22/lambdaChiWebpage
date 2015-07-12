@@ -1,16 +1,1 @@
-[{
-    "name": "Christopher Connors",
-    "info": [
-        "External Vice President",
-        "High Theta",
-        "Senior"
-    ],
-    "img": "topher.jpg"
-}, {
-    "name": "Logan Shain",
-    "info": [
-        "Low Theta",
-        "Junior"
-    ],
-    "img": "logan.png"
-}]
+[{"name":"Christopher Connors","zeta":"External Vice President","hol":"High Theta","year":"Senior","img":"topher.jpg"},{"name":"Logan Shain","zeta":"","hol":"Low Theta","year":"Junior","img":"logan.png"}]

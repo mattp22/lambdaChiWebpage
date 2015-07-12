@@ -4,6 +4,7 @@
         'ui.router',
         'ui.bootstrap',
         'jsend',
+        'ngCookies',
         'app.home',
         'app.philanthropy',
         'app.recruitment',

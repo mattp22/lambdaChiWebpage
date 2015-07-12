@@ -10,6 +10,7 @@
         <button ui-sref="app.philanthropy.info" style="margin-bottom:1em;" class="btn btn-info">Watermelon Bust Info</button>
     </div>
     <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="theta in vm.theta">
+        <button ng-show="vm.loggedIn" class="btn btn-primary pull-right" ng-click="vm.edit(theta, $index)">Edit</button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{theta.name}}</h4>
@@ -19,9 +20,9 @@
                     <img class="media-object" ng-src="app/philanthropy/images/{{theta.img}}" alt="theta">
                 </div>
                 <div class="media-body media-middle">
-                    <p ng-repeat="i in theta.info">
-                        {{i}}
-                    </p>
+                    <p>{{theta.zeta}}</p>
+                    <p>{{theta.hol}}</p>
+                    <p>{{theta.year}}</p>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@
         </p>
     </div>
     <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="delta in vm.delta">
+        <button ng-show="vm.loggedIn" class="btn btn-primary pull-right" ng-click="vm.edit(delta, $index)">Edit</button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{delta.name}}</h4>
@@ -15,9 +16,9 @@
                     <img class="media-object" ng-src="app/recruitment/images/{{delta.img}}" alt="delta">
                 </div>
                 <div class="media-body media-middle">
-                    <p ng-repeat="i in delta.info">
-                        {{i}}
-                    </p>
+                    <p>{{delta.zeta}}</p>
+                    <p>{{delta.hol}}</p>
+                    <p>{{delta.year}}</p>
                 </div>
             </div>
         </div>
