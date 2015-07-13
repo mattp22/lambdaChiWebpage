@@ -1,16 +1,12 @@
 <div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
-    <div class="col-sm-offset-1 col-sm-10">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="theta in vm.theta" ng-if="$index === 0">
         <h3>Philanthropy</h3>
-        <p>
-            The Sigma Lambda chapter of Lambda Chi Alpha takes pride in giving back to the Blacksburg community. Brothers participate in annual events hosted by Virginia Tech such as Greeks Giving Back and the Big Event. We also have a select group of brothers that volunteer at a local Special Olympics.
-        </p>
-        <p>
-            Lambda Chi Alpha is a proud partner with Feeding America. Feeding America provided emergency food assistance to more than 37 million Americans in fiscal year 2012 and is ranked #4 in The 100 Largest U.S. Charities by Forbes. Our annual philanthropy Watermelon Bust allows us to collect money donations and non-perishable items for local food banks partnering with Feeding America. For more information on watermelon Bust follow the link below.
-        </p>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editTheta(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <p class="paragraphs">{{theta.text}}</p>
         <button ui-sref="app.philanthropy.info" style="margin-bottom:1em;" class="btn btn-info">Watermelon Bust Info</button>
     </div>
-    <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="theta in vm.theta">
-        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.edit(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+    <div class="col-sm-5" ng-class-even="'col-sm-offset-1'" ng-repeat="theta in vm.theta" ng-if="$index > 0">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editTheta(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">{{theta.name}}</h4>

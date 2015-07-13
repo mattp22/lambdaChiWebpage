@@ -13,7 +13,7 @@
             });
         }
 
-        vm.edit = function(rho, index) {
+        vm.editRho = function(rho, index) {
             $scope.rho = angular.copy(rho);
             $scope.index = index;
 

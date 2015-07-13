@@ -3,11 +3,12 @@
     function DeltaEditCtrl($scope, $modalInstance, apiService) {
         var vm = this;
         vm.delta = $scope.delta;
+        vm.index = $scope.index;
 
         vm.submit = function() {
             var data = {
                 delta: vm.delta,
-                index: $scope.index
+                index: vm.index
             };
 
             apiService.editDelta(data).then(function() {

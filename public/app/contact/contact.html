@@ -1,7 +1,8 @@
 <div class="container content-container" ng-controller="ContactCtrl as vm">
     <div class="col-sm-offset-1 col-sm-5">
         <div class="row contact-rows" ng-repeat="i in vm.info">
-            <h4>{{i.name}}</h4>
+            <h4>{{i.position}} - {{i.name}}</h4>
+            <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editContact(i, $index)"><i class="glyphicon glyphicon-edit"></i></button>
             <p>Phone: {{i.phone}}
                 <br> Email: {{i.email}}</p>
             <div class="divide"></div>

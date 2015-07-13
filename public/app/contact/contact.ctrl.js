@@ -1,8 +1,9 @@
 (function(module) {
 
-    function ContactCtrl($scope, $http, apiService) {
+    function ContactCtrl($scope, $http, apiService, $cookies, $modal) {
         var vm = this;
         vm.info = null;
+        vm.loggedIn = $cookies.get('loggedIn');
 
         getContacts();
 
@@ -35,6 +36,20 @@
                     error = res.statusText;
                 }
                 alert('There was an error in submitting your email.\n\n' + error);
+            });
+        };
+
+        vm.editContact = function(contact, index) {
+            $scope.contact = angular.copy(contact);
+            $scope.index = index;
+
+            $modal.open({
+                templateUrl: 'app/contact/contactEdit.html',
+                controller: 'ContactEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getContacts();
             });
         };
     }

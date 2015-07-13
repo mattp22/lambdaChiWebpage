@@ -157,6 +157,14 @@
             );
         }
 
+        function editContact(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/contact',
+                data: data
+            });
+        }
+
         function rho() {
             return jsend({
                 method: 'GET',
@@ -193,6 +201,7 @@
             fallEvents: fallEvents,
             editFallEvent: editFallEvent,
             contact: contact,
+            editContact: editContact,
             rho: rho,
             editRho: editRho
         };

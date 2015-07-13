@@ -35,7 +35,7 @@
             }
         }
 
-        vm.edit = function(theta, index) {
+        vm.editTheta = function(theta, index) {
             $scope.theta = angular.copy(theta);
             $scope.index = index;
 

@@ -3,11 +3,12 @@
     function ThetaEditCtrl($scope, $modalInstance, apiService) {
         var vm = this;
         vm.theta = $scope.theta;
+        vm.index = $scope.index;
 
         vm.submit = function() {
             var data = {
                 theta: vm.theta,
-                index: $scope.index
+                index: vm.index
             };
 
             apiService.editTheta(data).then(function() {

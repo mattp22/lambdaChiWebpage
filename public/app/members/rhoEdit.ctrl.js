@@ -3,11 +3,12 @@
     function RhoEditCtrl($scope, $modalInstance, apiService) {
         var vm = this;
         vm.rho = $scope.rho;
+        vm.index = $scope.index;
 
         vm.submit = function() {
             var data = {
                 rho: vm.rho,
-                index: $scope.index
+                index: vm.index
             };
 
             apiService.editRho(data).then(function() {

@@ -1,11 +1,10 @@
 <div class="container content-container" ng-controller="RecruitmentCtrl as vm">
-    <div class="col-sm-offset-1 col-sm-10">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="delta in vm.delta" ng-if="$index === 0">
         <h3>Recruitment</h3>
-        <p>
-            During Rush our mission is to find gentlemen who demonstrate Lambda Chi Alpha's seven core values and whom we believe will make a positive impact on people in and out of our organization. These individuals need to be well-rounded gentlemen that also excel in the classroom. Spring recruitment at Virginia Tech is from January 26th - Feburary 8th. We encourage you to check out our events and feel free to contact Pete or Brian with any questions or concerns. For more info on the events check out the Spring 2015 rush page or click the facebook link below to check out the facebook page.
-        </p>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editDelta(delta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <p class="paragraphs">{{delta.text}}</p>
     </div>
-    <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'" ng-repeat="delta in vm.delta">
+    <div class="col-sm-5" ng-class-even="'col-sm-offset-1'" ng-repeat="delta in vm.delta" ng-if="$index > 0">
         <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editDelta(delta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">
