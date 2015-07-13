@@ -22,30 +22,17 @@
 </div>
 <div class="container" ng-controller="HomeCtrl as vm">
     <div class="col-sm-8">
-        <button ng-show="vm.loggedIn" class="btn btn-primary btn-edit" ng-click="vm.addEvent()">Add Event</button>
+        <button ng-show="vm.loggedIn" class="btn btn-primary btn-edit" ng-click="vm.addEvent()"><i class="glyphicon glyphicon-plus-sign"></i> Event</button>
         <div class="row well" ng-repeat="e in vm.events">
             <div class="col-sm-5">
                 <img class="news-img" ng-src="{{e.img}}" alt="image">
-                <h3>{{e.highZeta[0]}}</h3>
             </div>
             <div class="col-sm-7">
                 <h4 class="home-title">{{e.title}}</h4>
                 <h5 class="home-date">{{e.date}}</h5>
-                <p ng-repeat="p in e.text">
-                    {{p}}
+                <p class="paragraphs">
+                    {{e.text}}
                 </p>
-                <h5 class="home-header">{{e.headers[0]}}</h5>
-                <ul>
-                    <li ng-repeat="name in e.highZeta">
-                        {{name}}
-                    </li>
-                </ul>
-                <h5 class="home-header">{{e.headers[1]}}</h5>
-                <ul>
-                    <li ng-repeat="mem in e.newMembers">
-                        {{mem}}
-                    </li>
-                </ul>
             </div>
         </div>
     </div>

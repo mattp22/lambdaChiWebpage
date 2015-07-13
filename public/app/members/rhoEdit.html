@@ -19,6 +19,10 @@
             <label for="year">College Year</label>
             <input type="text" name="year" class="form-control" ng-model="rho.year" required>
         </div>
+        <div class="form-group">
+            <label for="img">Image url</label>
+            <input type="text" name="img" class="form-control" ng-model="rho.img" required>
+        </div>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="vm.submit()" ng-disabled="!rhoEditForm.$valid">Submit</button>
