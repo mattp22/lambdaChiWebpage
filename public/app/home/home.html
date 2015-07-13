@@ -24,6 +24,8 @@
     <div class="col-sm-8">
         <button ng-show="vm.loggedIn" class="btn btn-primary btn-edit" ng-click="vm.addEvent()"><i class="glyphicon glyphicon-plus-sign"></i> Event</button>
         <div class="row well" ng-repeat="e in vm.events">
+            <button ng-show="vm.loggedIn" class="btn btn-xs btn-danger pull-right" ng-click="vm.deleteEvent($index)"><i class="glyphicon glyphicon-remove"></i></button>
+            <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editEvent(e, $index)"><i class="glyphicon glyphicon-edit"></i></button>
             <div class="col-sm-5">
                 <img class="news-img" ng-src="{{e.img}}" alt="image">
             </div>

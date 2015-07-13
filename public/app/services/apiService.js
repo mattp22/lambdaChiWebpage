@@ -14,11 +14,26 @@
             );
         }
 
-        function addEvent(vm) {
+        function addEvent(data) {
             return jsend({
                 method: 'POST',
                 url: '/api/home-data',
-                data: vm
+                data: data
+            });
+        }
+
+        function editEvent(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/home-data',
+                data: data
+            });
+        }
+
+        function deleteEvent(data) {
+            return jsend({
+                method: 'DELETE',
+                url: '/api/home-data/' + data
             });
         }
 
@@ -164,6 +179,8 @@
         return {
             homeData: homeData,
             addEvent: addEvent,
+            editEvent: editEvent,
+            deleteEvent: deleteEvent,
             homeImages: homeImages,
             theta: theta,
             editTheta: editTheta,

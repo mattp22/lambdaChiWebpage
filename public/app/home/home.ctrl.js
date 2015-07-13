@@ -10,6 +10,9 @@
         getImages();
 
         vm.addEvent = function() {
+            $scope.type = "Add";
+            $scope.event = null;
+
             $modal.open({
                 templateUrl: 'app/home/event.html',
                 controller: 'EventCtrl as vm',
@@ -17,6 +20,28 @@
             }).result.finally(function() {
                 getEvents();
             });
+        };
+
+        vm.editEvent = function(event, index) {
+            $scope.event = angular.copy(event);
+            $scope.index = index;
+            $scope.type = "Edit";
+
+            $modal.open({
+                templateUrl: 'app/home/event.html',
+                controller: 'EventCtrl as vm',
+                scope: $scope
+            }).result.finally(function() {
+                getEvents();
+            });
+        };
+
+        vm.deleteEvent = function(index) {
+            if (confirm("Are you sure you want to delete this news event?")) {
+                apiService.deleteEvent(index).then(function() {
+                    getEvents();
+                });
+            }
         };
 
         function getEvents() {
