@@ -3,7 +3,7 @@
         <h3 id="winner">{{vm.slides[0].winners}}</h3>
         <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editSlides(vm.slides[0], 0)"><i class="glyphicon glyphicon-edit"></i></button>
         <div>
-            <img id="winners" src="{{vm.slides[0].winnersPic}}" alt="winners">
+            <img id="winners" src="{{vm.slides[0].winnersPic}}" alt="winners" width="570">
         </div>
         <h3 id="slideshow">{{vm.slides[1].wbHeader}}</h3>
         <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editSlides(vm.slides[1], 1)"><i class="glyphicon glyphicon-edit"></i></button>
