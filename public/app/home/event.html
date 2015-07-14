@@ -16,8 +16,13 @@
             <textarea name="text" rows="5" class="form-control" ng-model="vm.event.text" required></textarea>
         </div>
         <div class="form-group">
-            <label for="img">Image url</label>
-            <input type="text" name="img" class="form-control" ng-model="vm.event.img" required>
+            <div class="col-sm-2">
+                <img ng-src="{{vm.event.img}}" alt="image" height="60" width="60">
+            </div>
+            <div class="col-sm-offset-2">
+                <label for="img">Image url</label>
+                <input type="text" name="img" class="form-control" ng-model="vm.event.img" required>
+            </div>
         </div>
     </div>
     <div class="modal-footer">

@@ -48,6 +48,34 @@
                 getTheta();
             });
         };
+
+        vm.editInfo = function(info, index) {
+            $scope.info = angular.copy(info);
+            $scope.index = index;
+
+            $modal.open({
+                templateUrl: 'app/philanthropy/infoEdit.html',
+                controller: 'InfoEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getInfo();
+            });
+        };
+
+        vm.editSlides = function(slides, index) {
+            $scope.slides = angular.copy(slides);
+            $scope.index = index;
+
+            $modal.open({
+                templateUrl: 'app/philanthropy/slideEdit.html',
+                controller: 'SlideEditCtrl',
+                controllerAs: 'vm',
+                scope: $scope
+            }).result.finally(function() {
+                getSlides();
+            });
+        };
     }
 
     module.controller('PhilanthropyCtrl', PhilanthropyCtrl);

@@ -3,11 +3,12 @@
     function EventEditCtrl($scope, $modalInstance, apiService) {
         var vm = this;
         vm.event = $scope.event;
+        vm.index = $scope.index;
 
         vm.submit = function() {
             var data = {
                 event: vm.event,
-                index: $scope.index
+                index: vm.index
             };
 
             if ($scope.season === "spring") {

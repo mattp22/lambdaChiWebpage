@@ -1,7 +1,10 @@
 <div class="container content-container" ng-controller="RecruitmentCtrl as vm">
-    <h2>Fall Rush 2015</h2>
-    <div ng-repeat="e in vm.fallEvents" ng-class-even="'row'" class="event-rows">
-        <div class="col-sm-5" ng-class-odd="'col-sm-offset-1'">
+    <div ng-repeat="e in vm.fallEvents" ng-if="$index === 0">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editFall(e, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <h2>{{e.heading}}</h2>
+    </div>
+    <div ng-repeat="e in vm.fallEvents" ng-class-odd="'row'" class="event-rows" ng-if="$index > 0">
+        <div class="col-sm-5" ng-class-even="'col-sm-offset-1'">
             <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editFall(e, $index)"><i class="glyphicon glyphicon-edit"></i></button>
             <div class="panel panel-default">
                 <div class="panel-heading">

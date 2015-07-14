@@ -78,6 +78,14 @@
             );
         }
 
+        function editInfo(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/philanthropy-info',
+                data: data
+            });
+        }
+
         function philanthropySlides() {
             return jsend({
                 method: 'GET',
@@ -87,6 +95,14 @@
                     return response.data;
                 }
             );
+        }
+
+        function editSlides(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/philanthropy-slides',
+                data: data
+            });
         }
 
         function delta() {
@@ -193,7 +209,9 @@
             theta: theta,
             editTheta: editTheta,
             philanthropyInfo: philanthropyInfo,
+            editInfo: editInfo,
             philanthropySlides: philanthropySlides,
+            editSlides: editSlides,
             delta: delta,
             editDelta: editDelta,
             springEvents: springEvents,
