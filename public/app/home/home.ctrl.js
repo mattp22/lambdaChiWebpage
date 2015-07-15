@@ -36,6 +36,19 @@
             });
         };
 
+        vm.editImages = function(index) {
+            $scope.images = angular.copy(vm.images);
+            $scope.index = index;
+
+            $modal.open({
+                templateUrl: 'app/home/picEdit.html',
+                controller: 'PicEditCtrl as vm',
+                scope: $scope
+            }).result.finally(function() {
+                getImages();
+            });
+        };
+
         vm.deleteEvent = function(index) {
             if (confirm("Are you sure you want to delete this news event?")) {
                 apiService.deleteEvent(index).then(function() {

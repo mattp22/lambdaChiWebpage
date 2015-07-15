@@ -48,6 +48,15 @@
             );
         }
 
+        function editImages(data) {
+            return jsend({
+                method: 'PUT',
+                url: '/api/home-images',
+                data: data
+            });
+        }
+
+
         function theta() {
             return jsend({
                 method: 'GET',
@@ -200,12 +209,39 @@
             });
         }
 
+        function getJobs() {
+            return jsend({
+                method: 'GET',
+                url: '/api/jobs'
+            }).then(
+                function(response) {
+                    return response.data;
+                }
+            );
+        }
+
+        function addJob(data) {
+            return jsend({
+                method: 'POST',
+                url: '/api/jobs',
+                data: data
+            });
+        }
+
+        function deleteEntry(data) {
+            return jsend({
+                method: 'DELETE',
+                url: '/api/jobs/' + data
+            });
+        }
+
         return {
             homeData: homeData,
             addEvent: addEvent,
             editEvent: editEvent,
             deleteEvent: deleteEvent,
             homeImages: homeImages,
+            editImages: editImages,
             theta: theta,
             editTheta: editTheta,
             philanthropyInfo: philanthropyInfo,
@@ -221,7 +257,10 @@
             contact: contact,
             editContact: editContact,
             rho: rho,
-            editRho: editRho
+            editRho: editRho,
+            getJobs: getJobs,
+            addJob: addJob,
+            deleteEntry: deleteEntry
         };
     }
 

@@ -1,1 +1,43 @@
-<h1>This is the brothers page.</h1>
+<div class="container content-container" ng-controller="MembersCtrl as vm">
+    <h2>Jobs Database</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Major</th>
+                <th>Job Type</th>
+                <th>Company</th>
+                <th>Contact Name</th>
+                <th>Contact Email</th>
+                <th>Start Date</th>
+                <th>Post Date</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="job in vm.jobs" ng-class="{'description': vm.showed == job}">
+            <tr class="job" ng-click="vm.show(job)">
+                <td>{{$index + 1}}</td>
+                <td class="capitalize">{{job.major}}</td>
+                <td>{{job.type}}</td>
+                <td class="capitalize">{{job.company}}</td>
+                <td class="capitalize">{{job.contactName}}</td>
+                <td>{{job.contactEmail}}</td>
+                <td>{{job.start | date:'M/d/yyyy'}}</td>
+                <td>{{job.post | date:'M/d/yyyy'}}</td>
+            </tr>
+            <tr ng-show="vm.showed == job">
+                <td><strong>Description: </strong></td>
+                <td colspan="7" class="paragraphs">
+                    {{job.description}}
+                    <button class="btn btn-xs btn-danger pull-right" ng-click="vm.deleteEntry($index)"><i class="glyphicon glyphicon-remove"></i> Delete Entry</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>
+                    <button class="btn btn-primary btn-xs btn-edit" ng-click="vm.addEntry()"><i class="glyphicon glyphicon-plus-sign"></i> Entry</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
