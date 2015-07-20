@@ -1,35 +1,75 @@
 <div class="container content-container" ng-controller="MembersCtrl as vm">
     <h2>Jobs Database</h2>
-    <div class="table-responsive">
-        <table class="table">
+    <div class="container">
+        <div class="row input-group col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 search" ng-show="major">
+            <span class="input-group-addon" id="basic-addon1">Search by Major</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="search.major">
+        </div>
+        <div class="row input-group col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 search" ng-show="type">
+            <span class="input-group-addon" id="basic-addon1">Search by Job Type</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="search.type">
+        </div>
+        <div class="row input-group col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 search" ng-show="company">
+            <span class="input-group-addon" id="basic-addon1">Search by Company</span>
+            <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="search.company">
+        </div>
+    </div>
+    <div class="row search">
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="major" ng-init="major=true"> Major
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="type"> Job Type
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" ng-model="company"> Company
+        </label>
+    </div>
+    <div class="table-responsive" id="jobs">
+        <table class="table table-condensed">
             <thead>
                 <tr>
                     <th></th>
                     <th>Major</th>
                     <th>Job Type</th>
                     <th>Company</th>
+                    <th>Company Website</th>
                     <th>Contact Name</th>
                     <th>Contact Email</th>
-                    <th>Start Date</th>
                     <th>Post Date</th>
                 </tr>
             </thead>
-            <tbody ng-repeat="job in vm.jobs" ng-class="{'description': vm.showed == job}">
+            <tbody ng-repeat="job in vm.jobs | filter:search" ng-class="{'description': vm.showed == job}">
                 <tr class="job" ng-click="vm.show(job)">
                     <td>{{$index + 1}}</td>
                     <td class="capitalize">{{job.major}}</td>
                     <td>{{job.type}}</td>
                     <td class="capitalize">{{job.company}}</td>
+                    <td><a href="{{job.website}}" target="_blank">{{job.website}}</a></td>
                     <td class="capitalize">{{job.contactName}}</td>
-                    <td>{{job.contactEmail}}</td>
-                    <td>{{job.start | date:'M/d/yyyy'}}</td>
+                    <td><a href="mailto:{{job.contactEmail}}">{{job.contactEmail}}</a></td>
                     <td>{{job.post | date:'M/d/yyyy'}}</td>
                 </tr>
                 <tr ng-show="vm.showed == job">
+                    <td></td>
+                    <td><strong>Start Date: </strong></td>
+                    <td colspan="6">
+                        {{job.start | date:'M/d/yyyy'}}
+                    </td>
+                </tr>
+                <tr ng-show="vm.showed == job">
+                    <td></td>
+                    <td><strong>Apply at: </strong></td>
+                    <td colspan="6">
+                        <a href="{{job.application}}" target="_blank">{{job.application}}</a>
+                    </td>
+                </tr>
+                <tr ng-show="vm.showed == job">
+                    <td></td>
                     <td><strong>Description: </strong></td>
-                    <td colspan="7" class="paragraphs">
-                        {{job.description}}
-                        <button class="btn btn-xs btn-danger pull-right" ng-click="vm.deleteEntry($index)"><i class="glyphicon glyphicon-remove"></i> Delete Entry</button>
+                    <td colspan="5" class="paragraphs">{{job.description}}</td>
+                    <td>
+                        <button class="btn btn-xs btn-danger" ng-click="vm.deleteEntry($index)"><i class="glyphicon glyphicon-remove"></i> Entry</button>
                     </td>
                 </tr>
             </tbody>

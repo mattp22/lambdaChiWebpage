@@ -1,19 +1,15 @@
 <form name="eventForm" novalidate>
     <div class="modal-header">
-        <h2>{{vm.type}} Event</h2>
+        <h2>Job Entry</h2>
     </div>
     <div class="modal-body row">
-        <div class="form-group col-md-12">
-            <label for="major">Major (s)</label>
-            <input type="text" name="major" class="form-control" ng-model="job.major" placeholder="Computer Science, Business, Theatre" required>
-        </div>
-        <div class="form-group">
+        <div class="form-group job-entry">
             <div class="col-sm-6">
-                <label for="company">Company</label>
-                <input type="text" name="company" class="form-control" ng-model="job.company" placeholder="Google" required>
+                <label for="major">Major (s)*</label>
+                <input type="text" name="major" class="form-control" ng-model="job.major" placeholder="Computer Science, Business, Theatre" required>
             </div>
             <div class="col-sm-6">
-                <label for="type">Job Type</label>
+                <label for="type">Job Type*</label>
                 <select name="type" ng-model="job.type" ng-init="job.type='Full Time'" class="form-control">
                     <option value="Full Time">Full Time</option>
                     <option value="Part Time">Part Time</option>
@@ -22,23 +18,37 @@
                 </select required>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group job-entry">
+            <div class="col-sm-6">
+                <label for="company">Company*</label>
+                <input type="text" name="company" class="form-control" ng-model="job.company" placeholder="Google" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="website">Company Website*</label>
+                <input type="text" name="website" class="form-control" ng-model="job.website" placeholder="http://google.com" required>
+            </div>
+        </div>
+        <div class="form-group job-entry">
             <div class="col-sm-4">
-                <label for="contactName">Contact Name</label>
+                <label for="contactName">Contact Name*</label>
                 <input type="text" name="contactName" class="form-control" ng-model="job.contactName" placeholder="John Doe" required>
             </div>
             <div class="col-sm-4">
-                <label for="contactEmail">Contact Email</label>
+                <label for="contactEmail">Contact Email*</label>
                 <input type="email" name="contactEmail" class="form-control" ng-model="job.contactEmail" placeholder="johnDoe@vt.edu" required>
             </div>
             <div class="col-sm-4">
-                <label for="start">Start Date</label>
-                <input type="date" name="start" class="form-control" ng-init="job.start=vm.date" ng-model="job.start" required>
+                <label for="start">Start Date*</label>
+                <input type="date" name="start" class="form-control" ng-init="job.start=vm.date" ng-model="job.start">
             </div>
         </div>
         <div class="form-group col-sm-12">
-            <label for="text">News Description</label>
+            <label for="text">Job Description*</label>
             <textarea name="text" rows="5" class="form-control" ng-model="job.description" placeholder="Place job description here" required></textarea>
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="app">Application url</label>
+            <input type="text" name="app" class="form-control" ng-model="job.application" placeholder="http://lambdachivt.herokuapp.com">
         </div>
     </div>
     <div class="modal-footer">
