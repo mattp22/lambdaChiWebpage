@@ -16,13 +16,13 @@
     </div>
     <div class="row search">
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="major" ng-init="major=true"> Major
+            <input type="checkbox" ng-model="major" ng-init="major=true" ng-click="search.major=''"> Major
         </label>
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="type"> Job Type
+            <input type="checkbox" ng-model="type" ng-click="search.type=''"> Job Type
         </label>
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="company"> Company
+            <input type="checkbox" ng-model="company" ng-click="search.company=''"> Company
         </label>
     </div>
     <div class="table-responsive" id="jobs">
