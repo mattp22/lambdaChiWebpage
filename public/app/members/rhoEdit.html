@@ -1,0 +1,42 @@
+<form name="rhoEditForm" novalidate>
+    <div class="modal-header">
+        <h2>Edit Alumni Page</h2>
+    </div>
+    <div class="modal-body">
+        <div ng-if="vm.index !== 0">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" ng-model="rho.name" required>
+            </div>
+            <div class="form-group">
+                <label for="zeta">Zeta Position (If Held)</label>
+                <input type="text" name="zeta" class="form-control" ng-model="rho.zeta">
+            </div>
+            <div class="form-group">
+                <label for="hol">High or Low Position</label>
+                <input type="text" name="hol" class="form-control" ng-model="rho.hol" required>
+            </div>
+            <div class="form-group">
+                <label for="year">College Year</label>
+                <input type="text" name="year" class="form-control" ng-model="rho.year" required>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <img ng-src="{{rho.img}}" alt="image" height="60" width="60">
+                </div>
+                <div class="col-sm-offset-2">
+                    <label for="img">Image url</label>
+                    <input type="text" name="img" class="form-control" ng-model="rho.img" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-if="vm.index === 0">
+            <label for="text">Alumni Description</label>
+            <textarea name="text" rows="10" class="form-control" ng-model="rho.text" required></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="vm.submit()" ng-disabled="!rhoEditForm.$valid">Submit</button>
+        <button class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</form>

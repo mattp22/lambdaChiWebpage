@@ -1,0 +1,25 @@
+<div class="container content-container" ng-controller="RecruitmentCtrl as vm">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="delta in vm.delta" ng-if="$index === 0">
+        <h3>Recruitment</h3>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editDelta(delta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <p class="paragraphs">{{delta.text}}</p>
+    </div>
+    <div class="col-sm-5" ng-class-even="'col-sm-offset-1'" ng-repeat="delta in vm.delta" ng-if="$index > 0">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editDelta(delta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">{{delta.name}}</h4>
+            </div>
+            <div class="panel-body">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{delta.img}}" alt="delta" height="136" width="136">
+                </div>
+                <div class="media-body media-middle">
+                    <p>{{delta.zeta}}</p>
+                    <p>{{delta.hol}}</p>
+                    <p>{{delta.year}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

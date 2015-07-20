@@ -1,0 +1,61 @@
+[{
+    "type": "Co-op",
+    "start": "2015-10-20T14:21:09.640Z",
+    "major": "business",
+    "company": "KPMG",
+    "website": "http://kpmg.com",
+    "contactName": "jane lee",
+    "contactEmail": "janelee@vt.edu",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolor excepturi ratione aut nihil incidunt, rem? Consectetur officiis, possimus velit tempora. Dolores, accusamus doloremque nulla tenetur eveniet consectetur facilis! Quam.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut, in quisquam. Quis impedit aperiam cum, autem voluptates quaerat odit, suscipit recusandae, iste molestias, dolorum vero dolores sint tenetur tempore.",
+    "post": "2015-07-20T14:21:09.640Z"
+}, {
+    "type": "Co-op",
+    "start": "2015-09-20T14:19:16.378Z",
+    "major": "business",
+    "company": "PwC",
+    "website": "http://pwc.com",
+    "contactName": "jane smith",
+    "contactEmail": "janeSmith@vt.edu",
+    "description": "sample",
+    "post": "2015-07-20T14:19:16.378Z"
+}, {
+    "type": "Part Time",
+    "start": "2015-07-20T14:18:34.644Z",
+    "major": "business",
+    "company": "deloitte",
+    "website": "http://deloitte.com",
+    "contactName": "jane doe",
+    "contactEmail": "janeDoe@vt.edu",
+    "description": "sample",
+    "post": "2015-07-20T14:18:34.644Z"
+}, {
+    "type": "Internship",
+    "start": "2015-08-20T14:17:49.299Z",
+    "major": "computer science",
+    "company": "IBM",
+    "website": "http://ibm.com",
+    "contactName": "john lee",
+    "contactEmail": "johnlee@vt.edu",
+    "description": "sample",
+    "post": "2015-07-20T14:17:49.299Z"
+}, {
+    "type": "Full Time",
+    "start": "2016-07-20T14:17:10.946Z",
+    "major": "computer science",
+    "company": "amazon",
+    "website": "http://amazon.com",
+    "contactName": "john smith",
+    "contactEmail": "johnsmith@vt.edu",
+    "description": "sample",
+    "post": "2015-07-20T14:17:10.946Z"
+}, {
+    "type": "Full Time",
+    "start": "2015-07-31T14:16:25.739Z",
+    "major": "computer science",
+    "company": "Google",
+    "website": "http://google.com",
+    "contactName": "john doe",
+    "contactEmail": "johnDoe@vt.edu",
+    "description": "sample",
+    "post": "2015-07-20T14:16:25.739Z"
+}]

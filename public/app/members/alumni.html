@@ -1,0 +1,25 @@
+<div class="container content-container" ng-controller="MembersCtrl as vm">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="rho in vm.rho" ng-if="$index === 0">
+        <h3>Alumni</h3>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editRho(rho, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <p class="paragraphs">{{rho.text}}</p>
+    </div>
+    <div class="col-md-5 col-sm-7 col-sm-offset-1" ng-repeat="rho in vm.rho" ng-if="$index > 0">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editRho(rho, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">{{rho.name}}</h4>
+            </div>
+            <div class="panel-body">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{rho.img}}" alt="rho" height="136" width="136">
+                </div>
+                <div class="media-body media-middle">
+                    <p>{{rho.zeta}}</p>
+                    <p>{{rho.hol}}</p>
+                    <p>{{rho.year}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="theta in vm.theta" ng-if="$index === 0">
+        <h3>Philanthropy</h3>
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editTheta(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <p class="paragraphs">{{theta.text}}</p>
+        <button ui-sref="app.philanthropy.info" style="margin-bottom:1em;" class="btn btn-info">Watermelon Bust Info</button>
+    </div>
+    <div class="col-sm-5" ng-class-even="'col-sm-offset-1'" ng-repeat="theta in vm.theta" ng-if="$index > 0">
+        <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editTheta(theta, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">{{theta.name}}</h4>
+            </div>
+            <div class="panel-body">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{theta.img}}" alt="theta" height="136" width="136">
+                </div>
+                <div class="media-body media-middle">
+                    <p>{{theta.zeta}}</p>
+                    <p>{{theta.hol}}</p>
+                    <p>{{theta.year}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

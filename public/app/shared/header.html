@@ -1,4 +1,4 @@
-<div role="navigation" class="navbar navbar-default">
+<div role="navigation" class="navbar navbar-default navbar-static-top" ng-controller="HeaderCtrl as vm">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -7,34 +7,77 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href class="navbar-brand">
+            <a href="#/" class="navbar-brand">
                 <img src="app/shared/images/letters.png" alt="brand image">
             </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href>Home</a>
+                <li ng-class="{ active: vm.isActive('/')}">
+                    <a ui-sref="app.home"><i class="glyphicon glyphicon-home"></i> Home</a>
+                </li>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/philanthropy')}">
+                    <a ui-sref="app.philanthropy" class="dropdown-toggle disabled">
+                        <i class="glyphicon glyphicon-apple"></i> Philanthropy
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/philanthropy/info')}">
+                            <a ui-sref="app.philanthropy.info">&nbsp;<i class="ion-soup-can-outline"></i> &nbsp;Watermelon Bust Info</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/philanthropy/photos')}">
+                            <a ui-sref="app.philanthropy.photos"><i class="fa fa-picture-o"></i> Watermelon Bust Photos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/recruitment')}">
+                    <a ui-sref="app.recruitment" class="dropdown-toggle disabled">
+                        <i class="fa fa-user-plus"></i> Recruitment
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/recruitment/spring')}"><a ui-sref="app.recruitment.spring"><i class="fa fa-calendar"></i> Spring Rush</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/recruitment/fall')}"><a ui-sref="app.recruitment.fall"><i class="fa fa-calendar"></i> Fall Rush</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" ng-class="{ active: vm.isActive('/about')}">
+                    <a ui-sref="app.about" class="dropdown-toggle disabled">
+                        <i class="fa fa-info-circle"></i> About
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/about/history')}"><a ui-sref="app.about.history"><i class="fa fa-book"></i> History</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" ng-class="{ active: vm.isActive('/members')}">
+                    <a ui-sref="app.members" class="dropdown-toggle disabled">
+                        <i class="fa fa-users"></i> Members
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: vm.isActive('/members/alumni')}"><a ui-sref="app.members.alumni"><i class="fa fa-graduation-cap"></i> Alumni</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li ng-class="{active: vm.isActive('/members/brothers-page')}">
+                            <a href="" ng-click="vm.login()" disabled><img src="favicon.ico" alt=""> Brothers Page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li ng-class="{ active: vm.isActive('/contact')}">
+                    <a ui-sref="app.contact"><i class="glyphicon glyphicon-envelope"></i> Contact Us</a>
                 </li>
                 <li>
-                    <a href>About</a>
+                    <a href ng-hide="vm.loggedIn" ng-click="vm.admin()"><i class="fa fa-sign-in"></i> Login</a>
                 </li>
                 <li>
-                    <a href>Philanthropy</a>
-                </li>
-                <li>
-                    <a href>Recruitment</a>
-                </li>
-                <li>
-                    <a href>Members</a>
-                </li>
-                <li>
-                    <a href>Contact Us</a>
+                    <a href ng-show="vm.loggedIn" ng-click="vm.logout()"><i class="fa fa-sign-out"></i> Logout</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 <div id="content-header">
-    Loyalty&nbsp; • &nbsp;Duty&nbsp; • &nbsp;Respect&nbsp; • &nbsp;Service&nbsp; • &nbsp;Honor&nbsp; • &nbsp;Integrity&nbsp; • &nbsp;Personal Courage
+    <div class="hidden-xs">
+        Loyalty&nbsp; • &nbsp;Duty&nbsp; • &nbsp;Respect&nbsp; • &nbsp;Service&nbsp; • &nbsp;Honor&nbsp; • &nbsp;Integrity&nbsp; • &nbsp;Personal Courage
+    </div>
 </div>

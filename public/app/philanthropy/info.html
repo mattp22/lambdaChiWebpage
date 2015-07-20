@@ -1,0 +1,15 @@
+<div class="container content-container" ng-controller="PhilanthropyCtrl as vm">
+    <div class="col-md-offset-1">
+        <img class="hidden-xs" id="postersbanner" src="app/philanthropy/images/posters.jpg" alt="posters banner" width="950">
+        <div class="row info" ng-repeat="i in vm.info">
+            <div class="col-sm-4 col-md-4">
+                <img class="home-img" ng-src="{{i.img}}" alt="img" width="350" height="250">
+            </div>
+            <div class="col-sm-8 col-md-offset-1 col-md-6">
+                <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editInfo(i, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+                <h3>{{i.header}}</h3>
+                <p class="paragraphs">{{i.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

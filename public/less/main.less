@@ -1,6 +1,70 @@
+@green: #016a3a;
+body {
+    padding-bottom: 70px;
+}
+
+.checkbox {
+    margin-right: 1em;
+}
+
+.search {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#jobs {
+    margin-top: 2em;
+}
+
+.job-entry {
+    padding-bottom: 4em;
+}
+
+.capitalize {
+    text-transform:capitalize;
+}
+
+.description {
+    .job {
+        background-color: #CBCBCB;
+    }
+    background-color: #E5E5E5;
+}
+
+.table tr:hover {
+    cursor: pointer;
+}
+
+.paragraphs {
+    white-space: pre-line;
+}
+
+.btn-edit {
+    margin-bottom: 1em;
+}
+
 .navbar {
     border-radius: 0px;
     margin-bottom: 0px;
+    li {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.content-container {
+    background-color: #FEF6D9;
+    padding-bottom: 3.5em;
+    h3, h4 {
+        margin-top: 1em;
+        color: @green;
+        font-weight: bold;
+    }
+    h2 {
+        text-align: center;
+        color: @green;
+        font-style: italic;
+    }
 }
 
 .navbar-brand {
@@ -18,21 +82,238 @@
     padding-top: 2em;
     padding-bottom: 2em;
     h1 {
-        color: #016a3a;
-        font-weight: bold
+        color: @green;
+        font-weight: bold;
+        font-family: Copperplate Gothic Light, sans-serif;
     }
     h2 {
         color: maroon;
         font-style: italic;
         margin-top: 35px;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 }
 
 #content-header {
     height: 50px;
-    background-color: #016a3a;
+    background-color: @green;
     text-align: center;
     text-transform: uppercase;
     line-height: 50px;
     color: #fff;
+}
+
+.divide {
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px -2px 5px #888888;
+}
+
+.panel {
+    border: solid @green;
+}
+
+.media-body {
+    padding-left: 1em;
+}
+
+.home-img {
+    border: solid @green;
+    margin-bottom: 3em;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+.event-paragraph {
+    margin-top: 1em;
+}
+
+.event-rows,
+.contact-rows {
+    margin-top: 1em;
+}
+
+.info {
+    margin-top: 2em;
+}
+
+#composite {
+    margin-top: 3em;
+}
+
+#winner {
+    color: red;
+    text-align: center;
+}
+
+#slideshow {
+    text-align: center;
+}
+
+.carousel-indicators {
+    visibility: hidden;
+}
+
+.well-contact {
+    margin-top: 2em;
+}
+
+.home-title {
+    color: @green;
+}
+
+.home-date {
+    font-style: italic;
+}
+
+.home-header {
+    text-decoration: underline;
+    color: @green;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.social {
+    margin: 0;
+    width: 30px;
+}
+
+.contact {
+    font-weight: bold;
+}
+
+.jumbotron {
+    border-bottom: solid @green;
+}
+
+.news-img {
+    height: 270px;
+    width: 270px;
+}
+
+.media-body {
+    font-weight: bold;
+}
+
+#winners {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+    .news-img {
+        height: 200px;
+        width: 200px;
+    }
+    .navbar-collapse {
+        text-align: justify;
+    }
+    .navbar-fixed-bottom {
+        .navbar-right > li {
+            display: inline-block;
+        }
+        .navbar-right {
+            margin: 0;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+    }
+    .home-img {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 0;
+        margin-top: 2em;
+    }
+    #winners {
+        height: 200px;
+        width: 250px;
+    }
+    .panel {
+        margin-top: 2em;
+    }
+    #composite {
+        height: 340px;
+        width: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    #composite {
+        height: 600px;
+        width: 690px;
+    }
+    #vtbanner {
+        width: 720px;
+    }
+    #postersbanner {
+        width: 720px;
+    }
+    .news-img {
+        height: 150px;
+        width: 150px;
+    }
+    .jumbotron {
+        text-align: center;
+    }
+    .home-img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-static-top {
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .navbar-collapse.collapse {
+            display: none!important;
+        }
+        .navbar-nav {
+            float: none!important;
+            margin: 7.5px -15px;
+        }
+        .navbar-nav>li {
+            float: none;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-text {
+            float: none;
+            margin: 15px 0;
+        }
+        /* since 3.1.0 */
+        
+        .navbar-collapse.collapse.in {
+            display: block!important;
+        }
+        .collapsing {
+            overflow: hidden!important;
+        }
+    }
 }

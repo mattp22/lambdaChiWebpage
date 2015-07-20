@@ -1,0 +1,42 @@
+<form name="slideEditForm" novalidate>
+    <div class="modal-header">
+        <h2>Edit Pictures</h2>
+    </div>
+    <div class="modal-body">
+        <div>
+            <div class="form-group">
+                <em>Make sure to hit the submit button to save any changes you have made.</em>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <img ng-src="{{url}}" alt="image" height="60" width="60">
+                </div>
+                <div class="col-sm-offset-2">
+                    <label for="add">Add Image</label>
+                    <div class="pull-right">
+                        <button class="btn btn-xs btn-primary" ng-click="vm.add()"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
+                    <input type="text" name="add" class="form-control" ng-model="url">
+                </div>
+            </div>
+            <div class="form-group" ng-repeat="image in images">
+                <div class="col-sm-2">
+                    <img ng-src="{{images[$index]}}" alt="image" height="60" width="60">
+                </div>
+                <div class="col-sm-offset-2">
+                    <label for="img">Image {{$index + 1}}</label>
+                    <div class="pull-right">
+                        <button ng-if="$index !== 0" class="btn btn-xs btn-default" ng-click="vm.moveUp($index)"><i class="glyphicon glyphicon-chevron-up"></i></button>
+                        <button ng-if="$index !== slides.slides.length - 1" class="btn btn-xs btn-default" ng-click="vm.moveDown($index)"><i class="glyphicon glyphicon-chevron-down"></i></button>
+                        <button class="btn btn-xs btn-danger" ng-click="vm.remove($index)"><i class="glyphicon glyphicon-remove"></i></button>
+                    </div>
+                    <input type="text" name="img" class="form-control" ng-model="images[$index]" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="vm.submit()" ng-disabled="!slideEditForm.$valid">Submit</button>
+        <button class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</form>

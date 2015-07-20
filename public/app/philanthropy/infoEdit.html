@@ -1,0 +1,28 @@
+<form name="infoEditForm" novalidate>
+    <div class="modal-header">
+        <h2>Edit Philanthropy Info</h2>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="header">Heading</label>
+            <input type="text" name="header" class="form-control" ng-model="info.header" required>
+        </div>
+        <div class="form-group">
+            <label for="text">Info Description</label>
+            <textarea name="text" rows="5" class="form-control" ng-model="info.text" required></textarea>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <img ng-src="{{info.img}}" alt="image" height="60" width="60">
+            </div>
+            <div class="col-sm-offset-2">
+                <label for="img">Info Image</label>
+                <input type="text" name="img" class="form-control" ng-model="info.img" required>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="vm.submit()" ng-disabled="!infoEditForm.$valid">Submit</button>
+        <button class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</form>
