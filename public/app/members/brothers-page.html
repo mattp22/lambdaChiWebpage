@@ -52,6 +52,13 @@
                 </tr>
                 <tr ng-show="vm.showed == job">
                     <td></td>
+                    <td><strong>Job Title: </strong></td>
+                    <td colspan="6">
+                        {{job.title}}
+                    </td>
+                </tr>
+                <tr ng-show="vm.showed == job">
+                    <td></td>
                     <td><strong>Start Date: </strong></td>
                     <td colspan="6">
                         {{job.start | date:'M/d/yyyy'}}
