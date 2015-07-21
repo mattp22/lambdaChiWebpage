@@ -66,15 +66,15 @@
                 </tr>
                 <tr ng-show="vm.showed == job">
                     <td></td>
-                    <td><strong>Apply at: </strong></td>
-                    <td colspan="6">
-                        <a href="{{job.application}}" target="_blank">{{job.application}}</a>
-                    </td>
+                    <td><strong>Description: </strong></td>
+                    <td colspan="6" class="paragraphs">{{job.description}}</td>
                 </tr>
                 <tr ng-show="vm.showed == job">
                     <td></td>
-                    <td><strong>Description: </strong></td>
-                    <td colspan="5" class="paragraphs">{{job.description}}</td>
+                    <td><strong>Apply at: </strong></td>
+                    <td colspan="5">
+                        <a href="{{job.application}}" target="_blank">{{job.application}}</a>
+                    </td>
                     <td>
                         <button class="btn btn-xs btn-danger" ng-click="vm.deleteEntry($index)"><i class="glyphicon glyphicon-remove"></i> Entry</button>
                     </td>
