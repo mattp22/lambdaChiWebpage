@@ -1,5 +1,6 @@
-<div class="container content-container">
+<div class="container content-container" ng-controller="MembersCtrl as vm">
+    <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editRho(vm.rho[0], 0)"><i class="glyphicon glyphicon-edit"></i></button>
     <div class="col-md-offset-1 col-sm-10">
-        <img id="composite" src="app/members/images/composite.jpg" alt="composite" width="950">
+        <img id="composite" ng-src="{{vm.rho[0].img}}" alt="composite" width="950">
     </div>
 </div>

@@ -16,13 +16,13 @@
     </div>
     <div class="row search">
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="major" ng-init="major=true"> Major
+            <input type="checkbox" ng-model="major" ng-init="major=true" ng-click="search.major=''"> Major
         </label>
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="type"> Job Type
+            <input type="checkbox" ng-model="type" ng-click="search.type=''"> Job Type
         </label>
         <label class="checkbox-inline">
-            <input type="checkbox" ng-model="company"> Company
+            <input type="checkbox" ng-model="company" ng-click="search.company=''"> Company
         </label>
     </div>
     <div class="table-responsive" id="jobs">
@@ -49,6 +49,13 @@
                     <td class="capitalize">{{job.contactName}}</td>
                     <td><a href="mailto:{{job.contactEmail}}">{{job.contactEmail}}</a></td>
                     <td>{{job.post | date:'M/d/yyyy'}}</td>
+                </tr>
+                <tr ng-show="vm.showed == job">
+                    <td></td>
+                    <td><strong>Job Title: </strong></td>
+                    <td colspan="6">
+                        {{job.title}}
+                    </td>
                 </tr>
                 <tr ng-show="vm.showed == job">
                     <td></td>

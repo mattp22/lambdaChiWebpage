@@ -1,10 +1,10 @@
 <div class="container content-container" ng-controller="MembersCtrl as vm">
-    <div class="col-sm-offset-1 col-sm-10" ng-repeat="rho in vm.rho" ng-if="$index === 0">
+    <div class="col-sm-offset-1 col-sm-10" ng-repeat="rho in vm.rho" ng-if="$index === 1">
         <h3>Alumni</h3>
         <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editRho(rho, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <p class="paragraphs">{{rho.text}}</p>
     </div>
-    <div class="col-md-5 col-sm-7 col-sm-offset-1" ng-repeat="rho in vm.rho" ng-if="$index > 0">
+    <div class="col-md-5 col-sm-7 col-sm-offset-1" ng-repeat="rho in vm.rho" ng-if="$index > 1">
         <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editRho(rho, $index)"><i class="glyphicon glyphicon-edit"></i></button>
         <div class="panel panel-default">
             <div class="panel-heading">

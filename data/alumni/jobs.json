@@ -7,7 +7,8 @@
     "contactName": "jane lee",
     "contactEmail": "janelee@vt.edu",
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolor excepturi ratione aut nihil incidunt, rem? Consectetur officiis, possimus velit tempora. Dolores, accusamus doloremque nulla tenetur eveniet consectetur facilis! Quam.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ut, in quisquam. Quis impedit aperiam cum, autem voluptates quaerat odit, suscipit recusandae, iste molestias, dolorum vero dolores sint tenetur tempore.",
-    "post": "2015-07-20T14:21:09.640Z"
+    "post": "2015-07-20T14:21:09.640Z",
+    "title": "intern"
 }, {
     "type": "Co-op",
     "start": "2015-09-20T14:19:16.378Z",
@@ -17,7 +18,8 @@
     "contactName": "jane smith",
     "contactEmail": "janeSmith@vt.edu",
     "description": "sample",
-    "post": "2015-07-20T14:19:16.378Z"
+    "post": "2015-07-20T14:19:16.378Z",
+    "title": "intern"
 }, {
     "type": "Part Time",
     "start": "2015-07-20T14:18:34.644Z",
@@ -27,7 +29,8 @@
     "contactName": "jane doe",
     "contactEmail": "janeDoe@vt.edu",
     "description": "sample",
-    "post": "2015-07-20T14:18:34.644Z"
+    "post": "2015-07-20T14:18:34.644Z",
+    "title": "intern"
 }, {
     "type": "Internship",
     "start": "2015-08-20T14:17:49.299Z",
@@ -37,7 +40,8 @@
     "contactName": "john lee",
     "contactEmail": "johnlee@vt.edu",
     "description": "sample",
-    "post": "2015-07-20T14:17:49.299Z"
+    "post": "2015-07-20T14:17:49.299Z",
+    "title": "intern"
 }, {
     "type": "Full Time",
     "start": "2016-07-20T14:17:10.946Z",
@@ -47,7 +51,8 @@
     "contactName": "john smith",
     "contactEmail": "johnsmith@vt.edu",
     "description": "sample",
-    "post": "2015-07-20T14:17:10.946Z"
+    "post": "2015-07-20T14:17:10.946Z",
+    "title": "intern"
 }, {
     "type": "Full Time",
     "start": "2015-07-31T14:16:25.739Z",
@@ -57,5 +62,6 @@
     "contactName": "john doe",
     "contactEmail": "johnDoe@vt.edu",
     "description": "sample",
-    "post": "2015-07-20T14:16:25.739Z"
+    "post": "2015-07-20T14:16:25.739Z",
+    "title": "intern"
 }]

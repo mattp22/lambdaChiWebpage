@@ -10,7 +10,7 @@
         getJobs();
 
         function getRho() {
-            if ($location.path() === "/members/alumni") {
+            if ($location.path() === "/members" || $location.path() === "/members/alumni") {
                 apiService.rho().then(function(results) {
                     vm.rho = results;
                 });
