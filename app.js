@@ -21,6 +21,10 @@ app.use(cookieParser());
 app.use('/api', require('./lib/api'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/google378deecd5d84dba2.html', function(req, res) {
+  res.render('google378deecd5d84dba2.html');
+});
+
 // error handlers
 
 // development error handler
