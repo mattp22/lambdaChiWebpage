@@ -13,7 +13,7 @@
         'app.contact'
     ]);
 
-    function config($stateProvider, $urlRouterProvider) {
+    function config($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $stateProvider
             .state('app', {
@@ -29,6 +29,7 @@
             });
 
         $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
     }
 
     module.config(config);
