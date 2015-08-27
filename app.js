@@ -25,6 +25,10 @@ app.get('/google378deecd5d84dba2.html', function(req, res) {
   res.render('google378deecd5d84dba2.html');
 });
 
+app.get('/sitemap.xml', function(req, res) {
+  res.render('sitemap.xml');
+});
+
 // error handlers
 
 // development error handler
