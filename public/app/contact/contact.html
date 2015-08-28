@@ -1,34 +1,39 @@
 <div class="container content-container" ng-controller="ContactCtrl as vm">
-    <div class="col-sm-offset-1 col-sm-5">
-        <div class="row contact-rows" ng-repeat="i in vm.info">
-            <h4>{{i.position}} - {{i.name}}</h4>
-            <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editContact(i, $index)"><i class="glyphicon glyphicon-edit"></i></button>
-            <p>Phone: {{i.phone}}
-                <br> Email: {{i.email}}</p>
-            <div class="divide"></div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-5">
+            <div class="row contact-rows" ng-repeat="i in vm.info">
+                <h4>{{i.position}} - {{i.name}}</h4>
+                <button ng-show="vm.loggedIn" class="btn btn-xs btn-primary pull-right" ng-click="vm.editContact(i, $index)"><i class="glyphicon glyphicon-edit"></i></button>
+                <p>Phone: {{i.phone}}
+                    <br> Email: {{i.email}}</p>
+                <div class="divide"></div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-offset-1 well well-contact">
+            <p class="contact">Leave Us a Message</p>
+            <form role="form" data-ng-submit="vm.sendEmail()">
+                <div class="form-group">
+                    <input type="text" class="form-control" data-ng-model="vm.contactName" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" data-ng-model="vm.contactEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" data-ng-model="vm.subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" class="form-control" data-ng-model="vm.message" placeholder="Message" required></textarea>
+                </div>
+                <div class="hidden-xs col-sm-8">
+                    <p class="contact">All messages are forwarded to the chapter president.</p>
+                </div>
+                <div class="form-group col-sm-2 col-sm-offset-2">
+                    <button type="submit" class="btn btn-default pull-right">Send</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="col-sm-4 col-sm-offset-1 well well-contact">
-        <p class="contact">Leave Us a Message</p>
-        <form role="form" data-ng-submit="vm.sendEmail()">
-            <div class="form-group">
-                <input type="text" class="form-control" data-ng-model="vm.contactName" placeholder="Name" required>
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" data-ng-model="vm.contactEmail" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" data-ng-model="vm.subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-                <textarea rows="5" class="form-control" data-ng-model="vm.message" placeholder="Message" required></textarea>
-            </div>
-            <div class="hidden-xs col-sm-8">
-                <p class="contact">All messages are forwarded to the chapter president.</p>
-            </div>
-            <div class="form-group col-sm-2 col-sm-offset-2">
-                <button type="submit" class="btn btn-default pull-right">Send</button>
-            </div>
-        </form>
+    <div class="row">
+        <em style="color:gray" class="col-sm-offset-9">Site created by Matt Preziotti.</em>
     </div>
 </div>
