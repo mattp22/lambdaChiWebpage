@@ -9,6 +9,7 @@ var jsend = require('jsend');
 var app = express();
 
 app.use(jsend.middleware);
+app.use(require('prerender-node'));
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
