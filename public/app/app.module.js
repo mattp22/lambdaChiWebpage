@@ -29,7 +29,7 @@
             });
 
         $urlRouterProvider.otherwise('/');
-        $locationProvider.hashPrefix('!');
+        $locationProvider.html5Mode(true);
     }
 
     module.config(config);

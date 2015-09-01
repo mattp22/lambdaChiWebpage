@@ -8,8 +8,8 @@ var jsend = require('jsend');
 
 var app = express();
 
+app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:1337/').set('prerenderToken', 'g1oqo4O3NSIsNHsJ2BLw'));
 app.use(jsend.middleware);
-app.use(require('prerender-node').set('prerenderToken', 'g1oqo4O3NSIsNHsJ2BLw'));
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -23,11 +23,16 @@ app.use('/api', require('./lib/api'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/google378deecd5d84dba2.html', function(req, res) {
-  res.render('google378deecd5d84dba2.html');
+    res.render('google378deecd5d84dba2.html');
 });
 
 app.get('/sitemap.xml', function(req, res) {
-  res.render('sitemap.xml');
+    res.render('sitemap.xml');
+});
+
+// This will ensure that all routing is handed over to AngularJS 
+app.get('*', function(req, res) {
+    res.sendfile('./public/index.html');
 });
 
 // error handlers
