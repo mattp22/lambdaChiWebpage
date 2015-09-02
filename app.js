@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jsend = require('jsend');
+require('heroku-self-ping')("http://lambdachivt.herokuapp.com");
 
 var app = express();
 
